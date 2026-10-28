@@ -1,0 +1,287 @@
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#FCFBFA;color:#2A2630;
+ font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+ font-size:17px;line-height:1.85;word-break:keep-all;overflow-wrap:anywhere}
+a{color:#98480B;text-underline-offset:3px}
+img,svg{max-width:100%;height:auto;display:block}
+.fo{max-width:1180px;margin:0 auto;padding:0 18px}
+.gm{position:absolute;left:-9999px;top:0;background:#A35214;color:#fff;padding:10px 16px;z-index:99}
+.gm:focus{left:8px;top:8px}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid #A35214;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ── 유틸 띠 ───────────────────────────────────────────── */
+.pz{background:#241F2B;color:#F2EAF2;font-size:13.5px}
+.pz .fo{display:flex;gap:16px;align-items:center;min-height:36px;flex-wrap:wrap}
+.pz a{color:#F2EAF2;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-weight:700}
+.pz a:hover{text-decoration:underline}
+/* ★★★★2026-10-21 — 맨 위 띠 오른쪽 작은 글자. 붙박이 #C9BACB 였는데
+   **귀여운 사이트는 띠 바탕이 pri2**(COL['deep']=pri2)라 밝은 바탕에서 4.5:1 을 못 넘겼다
+   (ivory_apricot 4.31 · cream_tangerine 4.38 — 렌더검사가 잡았다).
+   #E6DAE6 으로 올려 **열 벌 모두 5.89 이상**으로 둔다. 본문 글자(#F2EAF2)보다는
+   여전히 흐려 위계는 그대로다. [[dark-text-on-its-own-pale-chip]] */
+.pz .dg{margin-left:auto;color:#E6DAE6}
+
+/* ── 머리띠 — 로고 / 가운데 찾기칸 / 전화 ─────────────── */
+.xw{background:#fff;border-bottom:1px solid #E9E3DE;position:sticky;top:0;z-index:50}
+.xw .fo{display:flex;align-items:center;gap:18px;min-height:74px}
+.de{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#2A2630;flex:0 0 auto}
+.de b{font-size:23px;letter-spacing:-.03em}
+.de small{display:block;font-size:10px;letter-spacing:.3em;color:#5B640A;font-weight:800}
+.pp{flex:1 1 auto;max-width:430px;margin:0 auto}
+.pp a{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 10px 0 18px;
+ border:1.8px solid #E9E3DE;border-radius:999px;background:#FCFBFA;text-decoration:none;
+ color:#5E5866;font-size:15px;font-weight:600;transition:border-color .15s ease}
+.pp a:hover{border-color:#A35214;background:#fff}
+.pp .pc{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;
+ width:36px;height:36px;border-radius:999px;background:#A35214;color:#fff;flex:0 0 36px}
+.lu{display:inline-flex;align-items:center;gap:8px;background:#A35214;color:#fff;
+ font-weight:800;padding:12px 20px;border-radius:12px;text-decoration:none;font-size:15px;
+ min-height:48px;flex:0 0 auto;transition:background .15s ease}
+.lu:hover{background:#98480B}
+
+/* ── 카테고리 레일 — miguhara 의 분류 줄 ───────────────── */
+.zj{background:#fff;border-bottom:1px solid #E9E3DE;position:sticky;top:74px;z-index:45}
+.zj .ko{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:9px 0}
+.zj .ko::-webkit-scrollbar{display:none}
+.zj a{flex:0 0 auto;padding:8px 15px;border-radius:999px;text-decoration:none;color:#2A2630;
+ font-weight:700;font-size:14.5px;white-space:nowrap;min-height:40px;display:inline-flex;
+ align-items:center}
+.zj a:hover{background:#F8F9EE}
+.zj a[aria-current]{background:#A35214;color:#fff}
+
+/* ── 빵부스러기 ────────────────────────────────────────── */
+.gw{background:#FCFBFA;font-size:13.5px;color:#5E5866;border-bottom:1px solid #E9E3DE}
+.gw .fo{padding:11px 18px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.gw a{color:#5E5866;text-decoration:none}
+.gw a:hover{text-decoration:underline}
+
+/* ── 히어로 ────────────────────────────────────────────── */
+.op{background:#fff;border-bottom:1px solid #E9E3DE}
+.op .fo{padding-top:30px;padding-bottom:34px}
+.cp{width:100%}
+.cp svg{width:100%;height:auto;border-radius:26px}
+.ye{display:none;width:100%}
+.ye svg{width:100%;height:auto;border-radius:22px}
+.tm{text-align:center;margin:26px auto 0;max-width:62ch}
+.op h1{font-size:33px;line-height:1.36;margin:0 0 12px;letter-spacing:-.03em}
+.op h1 em{font-style:normal;color:#A35214}
+.op .sj{font-size:17px;color:#5E5866;margin:0 auto 22px;max-width:50ch}
+.uh{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.uh a{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:12px;
+ text-decoration:none;font-weight:800;font-size:16px;min-height:54px;transition:background .15s ease}
+.uh .jq{background:#A35214;color:#fff}
+.uh .jq:hover{background:#98480B}
+.uh .ty{background:#fff;color:#98480B;border:1.8px solid #E9E3DE}
+.uh .ty:hover{border-color:#A35214;background:#F8F9EE}
+
+/* ── 구역 제목 — 가운데 정렬 영문 + 한글 + 짧은 밑줄 ──── */
+section{padding:50px 0;position:relative;overflow:hidden}
+section>.fo{position:relative;z-index:1}
+.wi{text-align:center;margin-bottom:28px}
+.wi .nc{display:block;font-size:12px;letter-spacing:.3em;color:#5B640A;font-weight:800}
+.wi h2{font-size:27px;margin:8px 0 0;letter-spacing:-.03em;line-height:1.34}
+.wi .ms{display:block;width:46px;height:4px;border-radius:4px;background:#B3C133;margin:14px auto 0}
+.wi p{margin:12px 0 0;color:#5E5866;font-size:15.5px}
+.wi .ze{display:inline-flex;align-items:center;gap:7px;margin-top:14px;border:1.6px solid #E9E3DE;
+ background:#fff;border-radius:999px;padding:9px 18px;text-decoration:none;color:#98480B;
+ font-weight:700;font-size:14.5px;min-height:44px}
+.wi .ze:hover{border-color:#A35214;background:#F8F9EE}
+
+/* 띠 빛깔 */
+.rc.na{background:#fff}
+.rc.tq{background:#F9F3EE}
+.rc.jq{background:#F4ECE6}
+.rc.hu{background:#F6F5F5}
+.rc.ty{background:#F8F9EE}
+
+/* ── 지역 고르개 ───────────────────────────────────────── */
+.vm{background:#fff;border:1px solid #E9E3DE;border-radius:18px;padding:20px;max-width:860px;
+ margin:0 auto}
+.vm .np{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end}
+.bl label{display:block;font-size:12.5px;font-weight:800;color:#A35214;margin-bottom:6px}
+.vm select{width:100%;min-height:50px;border:1.6px solid #E9E3DE;border-radius:12px;padding:0 12px;
+ font-size:16px;background:#fff;color:#2A2630;font-family:inherit}
+.vm select:disabled{background:#FCFBFA;color:#8E8792}
+.vm .tu{min-height:50px;padding:0 24px;border:0;border-radius:12px;background:#A35214;color:#fff;
+ font-weight:800;font-size:16px;cursor:pointer;font-family:inherit;transition:background .15s ease}
+.vm .tu:disabled{background:#DCE3F5;color:#98480B;cursor:default}
+
+/* ── 4열 카드 그리드 — miguhara 상품 칸 ────────────────── */
+.is{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.hz{background:#fff;border:1px solid #E9E3DE;border-radius:16px;overflow:hidden;
+ text-decoration:none;color:inherit;display:flex;flex-direction:column;
+ transition:border-color .15s ease,transform .15s ease}
+.hz:hover{border-color:#A35214;transform:translateY(-2px)}
+.hz .fc{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.hz .mk{padding:15px 16px 17px;display:flex;flex-direction:column;gap:7px;flex:1}
+.hz .fh{display:inline-flex;align-items:center;align-self:flex-start;background:#F8F9EE;
+ color:#98480B;font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px}
+.hz b{font-size:17.5px;letter-spacing:-.02em}
+.hz .mt{color:#5E5866;font-size:14px}
+.hz .gb{margin:0;color:#5E5866;font-size:14.5px;line-height:1.72}
+.hz .ea{margin-top:auto;color:#A35214;font-weight:800;font-size:14px}
+
+/* 갈래 타일 — 사진 넉 장 */
+.wd{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.lc{background:#fff;border:1px solid #E9E3DE;border-radius:16px;overflow:hidden;
+ text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.lc:hover{border-color:#A35214}
+.lc img{width:100%;aspect-ratio:4/5;object-fit:cover}
+/* ★사진이 없는 사이트는 글자 카드(SVG)가 들어온다 — 크기를 안 주면 안 보인다 */
+.lc .fc{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.lc .tw{padding:15px 16px 18px;display:flex;flex-direction:column;gap:6px}
+.lc b{font-size:17.5px}
+.lc small{color:#5E5866;font-size:14.5px;line-height:1.7}
+.lc .ea{color:#A35214;font-weight:800;font-size:14px;margin-top:4px}
+
+/* 하루의 이름 — 축 */
+.zp{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.zp a{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #E9E3DE;
+ border-radius:14px;padding:13px 15px;text-decoration:none;color:inherit;min-height:66px}
+.zp a:hover{border-color:#A35214}
+.zp a[aria-current]{border-color:#A35214;background:#F8F9EE}
+.ei{display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;
+ border-radius:14px;flex:0 0 50px}
+.zp b{display:block;font-size:16px}
+.zp small{display:block;color:#5E5866;font-size:13.5px;line-height:1.6}
+.wa{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;
+ border-radius:14px}
+
+/* ── 칩 줄 ─────────────────────────────────────────────── */
+.ki{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.ki a{display:inline-flex;align-items:center;min-height:44px;padding:9px 16px;background:#fff;
+ border:1.4px solid #E9E3DE;border-radius:999px;text-decoration:none;color:#2A2630;
+ font-weight:700;font-size:14.5px}
+.ki a:hover{border-color:#A35214;background:#F8F9EE;color:#98480B}
+
+/* ── 글 덩이 ───────────────────────────────────────────── */
+.ry{background:#fff;border:1px solid #E9E3DE;border-radius:18px;padding:30px 32px;
+ max-width:860px;margin:0 auto;position:relative}
+.tx{position:absolute;top:-23px;left:30px}
+.ug{max-width:66ch}
+.ug h2{font-size:23px;margin:0 0 16px;letter-spacing:-.025em;line-height:1.4;
+ padding-left:14px;border-left:5px solid #B3C133}
+.ug p{margin:0 0 15px;font-size:17px;line-height:1.88}
+.ug p:last-child{margin-bottom:0}
+.ug strong{font-weight:800;color:#98480B}
+.ug a{color:#98480B;font-weight:700}
+/* 배경에 숨은 장식 — ★처음엔 left:-10px 로 두었더니 화면 가장자리에서 **반쯤 잘린
+   흰 상자**처럼 보였다(PC 캡처로 잡았다). 안으로 들이고 더 연하게 깐다. */
+.gd{position:absolute;opacity:.3;pointer-events:none;z-index:0}
+.gd.oc{left:30px;top:40px}
+.gd.sv{right:34px;top:60px}
+.gd.pc{right:48px;bottom:26px}
+.gd.cd{left:44px;bottom:34px}
+@media (max-width:1180px){.gd{display:none}}
+
+/* ── 요금 ──────────────────────────────────────────────── */
+.oj{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:0 auto}
+.oj .en{background:#fff;border:1px solid #E9E3DE;border-radius:16px;padding:22px;text-align:center}
+.oj .en.da{border:2px solid #A35214}
+.oj .tp{font-weight:800;font-size:17px}
+.oj .ym{color:#5B640A;font-weight:800;font-size:13.5px;letter-spacing:.06em;margin-top:4px}
+.oj .zl{font-size:28px;font-weight:900;color:#A35214;margin:8px 0 6px;letter-spacing:-.02em}
+.oj .us{color:#5E5866;font-size:14.5px;line-height:1.7}
+.la{text-align:center;color:#5E5866;font-size:15px;margin-top:18px}
+table.sd{border-collapse:collapse;width:100%;margin:6px 0 14px;font-size:16px}
+table.sd th,table.sd td{border:1px solid #E9E3DE;padding:11px 12px;text-align:left}
+table.sd th{background:#F8F9EE;font-weight:800;width:9em;white-space:nowrap}
+table.sd td.na{font-weight:800;color:#A35214;text-align:right;white-space:nowrap}
+
+/* ── 문답 ──────────────────────────────────────────────── */
+.kk{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.zh{background:#fff;border:1px solid #E9E3DE;border-radius:14px;padding:19px 22px}
+.zh dt{margin:0 0 8px}
+.zh h3{margin:0;font-size:17.5px;line-height:1.5;color:#98480B}
+.zh dd{margin:0;color:#2A2630;font-size:16.5px;line-height:1.85}
+
+/* ── 꼬리칸 — 여러 칸 ──────────────────────────────────── */
+.uu{background:#fff;border-top:1px solid #E9E3DE;margin-top:10px;position:relative}
+.eu{position:absolute;left:0;right:0;bottom:0;width:100%;height:190px;opacity:.5;z-index:0}
+.uu .fo{position:relative;z-index:1;padding-top:40px;padding-bottom:40px}
+.nn{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:28px}
+.nn h4{margin:0 0 12px;font-size:14px;letter-spacing:.14em;color:#5B640A;font-weight:800}
+.nn p{margin:0 0 10px;color:#5E5866;font-size:14.5px;line-height:1.78}
+.gq{display:flex;flex-wrap:wrap;gap:8px}
+.gq a{color:#98480B;text-decoration:none;font-size:14.5px;font-weight:600;
+ border:1px solid #E9E3DE;border-radius:999px;padding:7px 13px;min-height:40px;
+ display:inline-flex;align-items:center}
+.gq a:hover{border-color:#A35214;background:#F8F9EE}
+.bj{display:inline-flex;align-items:center;gap:8px;background:#A35214;color:#fff;font-weight:800;
+ padding:12px 20px;border-radius:12px;text-decoration:none;min-height:50px}
+.lr{border-top:1px solid #E9E3DE;margin-top:28px;padding-top:18px;color:#5E5866;font-size:13.5px}
+
+/* ── 모바일 바닥 전화 띠 ───────────────────────────────── */
+
+/* ── 프로그램 메뉴(히어로 바로 아래 · 9:16) ───────────────────────── */
+/* ★★★사진 **위에 글자를 얹지 않는다** — 사진 밝기가 쪽마다 달라 흰 글자가 묻힌다.
+   마소라에서 정한 규칙이다([[newsite-massora-4metro-course-order]]). 글은 사진 아래 흰 칸에. */
+.ej{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.ot{display:flex;flex-direction:column;background:#fff;border:1px solid #E9E3DE;
+ border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;
+ transition:border-color .15s ease,transform .15s ease}
+.ot:hover{border-color:#A35214;transform:translateY(-2px)}
+.ot:focus-visible{outline:3px solid #A35214;outline-offset:2px}
+.ot img,.ot .og{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#F4ECE6}
+.av{padding:12px 13px 14px}
+.av b{display:block;font-size:16px;color:#98480B;letter-spacing:-.02em;line-height:1.35}
+.av small{display:block;font-size:12.5px;color:#5E5866;margin-top:4px;line-height:1.5}
+.ey{display:none}
+
+@media (max-width:1000px){
+ /* ★프로그램 메뉴 — 5열은 손전화에서 손톱만 해진다. 옆으로 쓸어 보는 줄로 바꾼다. */
+ .ej{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:42%;
+  overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;
+  -webkit-overflow-scrolling:touch;scrollbar-width:thin}
+ .ot{scroll-snap-align:start}
+ .is{grid-template-columns:repeat(3,1fr)}
+ .wd{grid-template-columns:repeat(2,1fr)}
+ .zp{grid-template-columns:repeat(2,1fr)}
+ .nn{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+ body{font-size:16.5px}
+ .xw .fo{min-height:64px;gap:10px}
+ .zj{top:64px}
+ .pp{display:none}
+ .lu{margin-left:auto;padding:10px 14px;font-size:14px}
+ .cp{display:none}
+ .ye{display:block}
+ .op h1{font-size:26px}
+ .op .fo{padding-top:22px;padding-bottom:26px}
+ section{padding:38px 0}
+ .wi h2{font-size:23px}
+ .is{grid-template-columns:repeat(2,1fr);gap:13px}
+ .hz b{font-size:16px}
+ .hz .mk{padding:12px 13px 14px}
+ .wd{grid-template-columns:repeat(2,1fr);gap:13px}
+ .ej{grid-auto-columns:60%;gap:11px}
+ .av b{font-size:15px}
+ .zp{grid-template-columns:1fr}
+ .oj{grid-template-columns:1fr}
+ .ry{padding:24px 18px;border-radius:14px}
+ .ug h2{font-size:20px}
+ .vm .np{grid-template-columns:1fr}
+ .nn{grid-template-columns:1fr;gap:22px}
+ .uu .fo{padding-bottom:96px}
+ /* 바닥 고정 전화 띠 — ★사장님 지시: 모바일에서 전화연결 단추에 「출장마사지」 */
+ .ey{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#A35214;
+  box-shadow:0 -4px 18px rgba(42,38,48,.16)}
+ .ey a{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;color:#fff;
+  text-decoration:none;font-weight:800;font-size:17px;min-height:58px}
+ .ey .ff{display:block;font-size:11.5px;font-weight:700;opacity:.9}
+}
+@media (max-width:420px){
+ .is{grid-template-columns:1fr}
+}
+
+.rc{padding:48px 0}
+.ug{max-width:64ch}
+.ug h2{padding-bottom:10px;position:relative;letter-spacing:-.015em}
+.ug h2::after{content:'';position:absolute;left:0;bottom:0;width:54px;height:5px;
+  border-radius:3px;background:#A35214}
+.ug p{line-height:1.80}
+.mk{border-radius:12px}
